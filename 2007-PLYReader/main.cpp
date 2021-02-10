@@ -148,19 +148,19 @@ void keyboard(unsigned char key, int x, int y){
 		case 27:
 			exit(0);
 			break;
-		case 'y':
+		case '6':
 			eixoy = (eixoy + 5) % 360;
 			glutPostRedisplay();
 			break;
-		case 'Y':
+		case '4':
 			eixoy = (eixoy - 5) % 360;
 			glutPostRedisplay();
 			break;
-		case 'x':
+		case '2':
 			eixox = (eixox + 5) % 360;
 			glutPostRedisplay();
 			break;
-		case 'X':
+		case '8':
 			eixox = (eixox - 5) % 360;
 			glutPostRedisplay();
 			break;
