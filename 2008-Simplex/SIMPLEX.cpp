@@ -42,8 +42,8 @@ int main(){
             cabecalho_padrao();          
             cout << endl << "\tBem vindo ao metodo Simplex" << endl;
             cout << endl << "\t                       Menu Principal" << endl;                                     
-            cout << endl << "\t1 - Continuar";
-            cout << endl << "\t2 - Abandonar";
+            cout << endl << "\t1 - Novo Metodo Simplex";
+            cout << endl << "\t2 - Abandonar o programa";
             cout << endl << "\tFaca a sua escolha: ";
             cin >> escolha;
             if(escolha < 1 || escolha > 2){
@@ -79,7 +79,7 @@ int main(){
         }while(qtd_VarDec < 1 || qtd_VarDec > 3);
         //Recebe a quantidade de restrições a serem utilizadas
         do{
-           cout << endl << "Digite a quantidade de restricoes a serem utilizadas: ";
+           cout << endl << "Digite a quantidade de restricoes a serem utilizadas (MAX 10): ";
            cin >> qtd_VarRest;
            if(qtd_VarRest < 0 || qtd_VarRest > MAX){
               cout << endl;
@@ -91,10 +91,10 @@ int main(){
         }while(qtd_VarRest < 0 || qtd_VarRest > MAX);
         //Exibe o cabeçalho
         cabecalho_padrao();
-        //Recebe as variaveis de decisão da função objetivo                    
+        //Recebe as variaveis de decisão da função objetivo
         cout << endl << "Insira "<< qtd_VarDec << " variaveis de decisao separando-as com Enter:" << endl;
         for(i = 0;i < qtd_VarDec;i++){
-            cout << i + 1 << ": ";
+            cout << "X" << i + 1 << ": ";
             cin >> VarDec[i];
         }
         //Exibe o cabeçalho
@@ -102,12 +102,12 @@ int main(){
         //Recebe as restrições
         cout << endl << "Insira "<< qtd_VarRest << " restricoes de acordo com o solicitado:" << endl << endl;
         for(i = 1; i <= qtd_VarRest;i++){
-            for(j = 1; j <= qtd_VarDec; j++){
-                 cout << j << " variavel de decisao da " << i << " restricao: ";
+            for(j = 0; j < qtd_VarDec; j++){
+                 cout << "X" << j + 1 << ", variavel de decisao da " << i << " restricao: ";
                  cin >> VarRestri[i-1][j];
             }
-            cout <<  "Variavel Basica da " << i << " restricao: ";
-            cin >> VarRestri[i][j];              
+            cout <<  "Variavel Basica (valor da restricao) da " << i << " restricao: ";
+            cin >> VarRestri[i-1][3];              
             cout << endl;
         }
         //Aplica o método Simplex
@@ -432,9 +432,12 @@ void solucoesTipo(float resultados[][MAX+2+3][MAX_AUX],
 				//cabeçalho Tabela
 				cout << "\t";
 				for(j = 0; j < qtd_VarDec + 1; j++){
-				      cout << "X" << j + 1 << "    | ";
+				      if (j==0) 
+                         cout << "Z" << "     | ";
+                      else 
+                         cout << "X" << j << "    | ";
 				}
-				for(j = 4; j < qtd_VarRest + 4; j++){
+				for(j = 0; j < qtd_VarRest ; j++){
 				      cout << "F" << j + 1 << "    | ";
 				}				
                 cout << "b" << endl;
@@ -442,12 +445,18 @@ void solucoesTipo(float resultados[][MAX+2+3][MAX_AUX],
 				for(i = 0; i < qtd_VarRest + 1; i++){
 					cout << "\t";
 					for(j = 0; j < qtd_VarDec + 1; j++){
-						cout << resultados[i][j][k] << "    | ";
+						if (resultados[i][j][k] < 0)
+						   cout << resultados[i][j][k] << "    | ";
+                        else
+                           cout << resultados[i][j][k] << "     | ";
 					}
 					for(j = 4; j < qtd_VarRest + 4; j++){
-						cout << resultados[i][j][k] << "    | ";
+						if (resultados[i][j][k] < 0)
+						   cout << resultados[i][j][k] << "    | ";
+						else
+                           cout << resultados[i][j][k] << "     | ";
 					}
-					cout << resultados[i][14][k] << "    | ";
+					cout << resultados[i][14][k] << "   | ";
 					cout << endl ;
 				}
                 cout << endl << "\t";
