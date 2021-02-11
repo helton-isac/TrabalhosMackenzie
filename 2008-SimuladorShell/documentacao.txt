@@ -1,0 +1,27 @@
+/*********************************************
+** Helton Isac Torres Galindo     3068645-8 **
+** Renato Ribeiro Pedrosa         3062961-6 **
+** 					    **
+** Sistemas Operacionais - 5°N              **
+*********************************************/
+
+
+O projeto consiste em criar uma shell que utilize chamadas de sistemas MINIX.
+
+A shell possui as seguintes caracteristicas:
+
+	Prompt no formato [usuário:path atual]#
+	Busca de comandos nos diretorios do path
+	Suporte a caminho relativo ou absoluto.
+		Relativo: Toma como base o diretorio atual.
+		Ex. ../../a.out
+		Absoluto: Caminho completo a partir do diretorio raiz (também conhecido por /).
+		Ex. /root/a.out
+	Execução em foreground ou em background.
+		Foreground: Só aceita um novo comando após o término da execução do comando atual.
+		Ex. ./a.out (chamada normal).
+		Background: Aceita um novo comando logo após o início da execução do comando atual.
+		Ex. ./a.out & (acrescenta-se o & após o comando)
+
+
+

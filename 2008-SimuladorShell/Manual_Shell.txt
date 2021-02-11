@@ -1,0 +1,12 @@
+/*********************************************
+** Helton Isac Torres Galindo     3068645-8 **
+** Renato Ribeiro Pedrosa         3062961-6 **
+** 					    **
+** Sistemas Operacionais - 5°N              **
+*********************************************/
+
+O arquivo SO_T1_Helton_Renato.c deverá ser compilado no MINIX e em seguida executado.
+
+O simulador de shell aceita comandos que podem ser interpretados pelo MINIX,
+também suporta execuções em background ou foreground com o uso do caracter &.
+A qualquer momento é possível abandonar o programa enviando o comando "exit".
