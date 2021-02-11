@@ -1,0 +1,62 @@
+Manual do Usuário - Projeto Fase 2.0 - Helton Isac e Renato Pedrosa
+
+Todos os arquivos ply utilizados neste programa foram criados
+pelos autores do projeto.
+
+Este projeto tem como funções:
+
+Executa a leitura de 4 arquivos plys (ply1, ply2, ply3, ply4).
+
+Aplica funções de movimento nos 4 objetos, sendo que no arquivo 
+ply4, executa os comandos solicitados pela professora.
+
+Efeitos de luz foram aplicados ao projeto. E foi adicionado um efeito
+onde a luz passa horizontalmente pelos objetos.
+
+Comandos utilizados.
+
+
+l (ele minúsculo) Liga a luz automatica.
+L (ele maiúsculo) Desliga a luz automatica
+
+i acende a luz da cena.
+I apaga a luz da cena.
+
+q Zoom In do objeto ply1 (I na cena)
+Q Zoom Out do objeto ply1 (I da cena)
+
+w Zoom In do objeto ply2 (C na cena)
+W Zoom Out do objeto ply2 (C na cena)
+
+e Zoom In do objeto ply3 (G na cena)
+E Zoom Out do objeto ply3 (G na cena)
+
+a Eixo de rotacao y do objeto ply1 (I na cena)
+A Eixo de rotacao y do objeto ply1 (I na cena)
+
+s Eixo de rotacao y do objeto ply2 (C na cena)
+S Eixo de rotacao y do objeto ply2 (C na cena)
+ 
+d Eixo de rotacao y do objeto ply3 (G na cena)
+D Eixo de rotacao y do objeto ply3 (G na cena)
+
+z Eixo de rotacao x do objeto ply1 (I na cena)
+Z Eixo de rotacao x do objeto ply1 (I na cena)
+
+x Eixo de rotacao x do objeto ply2 (C na cena)
+X Eixo de rotacao x do objeto ply2 (C na cena)
+ 
+c Eixo de rotacao x do objeto ply3 (G na cena)
+C Eixo de rotacao x do objeto ply3 (G na cena)
+
++ Zoom in do objeto ply4 (Diamante na cena)
+- Zoom out do objeto ply4 (Diamante na cena)
+
+Setas do teclado: Movimenta o objeto ply4 (Diamante na cena)
+nos eixos x (setas para esquerda e para direita)
+e Y (setas para cima e para baixo)
+
+Page Up e Page Down - Movimenta o objeto ply4 (Diamante na cena) no eixo z.
+
+j habilita a rotação de todos os objetos da cena e a iluminação automática.
+J desabilita rotação de todos os objetos da cena e a iluminação automática.
